@@ -10,6 +10,6 @@ namespace LeanKit.API.Client.Library
 {
 	public interface ILeanKitClient
 	{
-		ILeanKitApi Initialize(LeanKitAccountAuth accountAuth);
+        ILeanKitApi Initialize(ILeanKitAccountAuth accountAuth);
 	}
 }

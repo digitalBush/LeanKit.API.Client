@@ -54,7 +54,7 @@ namespace LeanKitNotifier
 				var password = ConfigurationManager.AppSettings["LeanKit-Password"];
 				var boardIds = ConfigurationManager.AppSettings["LeanKit-BoardId"];
 
-				var leanKitAuth = new LeanKitAccountAuth
+				var leanKitAuth = new LeanKitBasicAuth
 				{
 					Hostname = host,
 					Username = email,

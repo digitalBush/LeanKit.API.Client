@@ -83,7 +83,7 @@ namespace LeanKit.API.Client.Library
 	{
 		private const string DefaultOverrideReason = "WIP Override performed by external system";
 		private readonly IRestCommandProcessor _restCommandProcessor;
-		private LeanKitAccountAuth _accountAuth;
+        private ILeanKitAccountAuth _accountAuth;
 
 		public LeanKitClient(IRestCommandProcessor restCommandProcessor)
 		{
@@ -524,7 +524,7 @@ namespace LeanKit.API.Client.Library
 
 		#region ILeanKitClient Members
 
-		public ILeanKitApi Initialize(LeanKitAccountAuth accountAuth)
+        public ILeanKitApi Initialize(ILeanKitAccountAuth accountAuth)
 		{
 			_accountAuth = accountAuth;
 			return this;

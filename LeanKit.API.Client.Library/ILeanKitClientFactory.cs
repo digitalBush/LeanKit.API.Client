@@ -15,6 +15,6 @@ namespace LeanKit.API.Client.Library
 	/// </summary>
 	public interface ILeanKitClientFactory
 	{
-		ILeanKitApi Create(LeanKitAccountAuth accountAuth);
+        ILeanKitApi Create(ILeanKitAccountAuth accountAuth);
 	}
 }
