@@ -32,21 +32,24 @@ namespace LeanKit.API.Client.Library.TransferObjects
 
     public class LeanKitBasicAuth : LeanKitAccountAuthBase
     {
-        public LeanKitBasicAuth()
+        public LeanKitBasicAuth(string username, string password)
             : base()
-		{
-		}
+        {
+            Username = username;
+            Password = password;
+        }
 
-		public string Username { get; set; }
+        public string Username { get; set; }
 
 		public string Password { get; set; }
     }
 
     public class LeanKitTokenAuth : LeanKitAccountAuthBase
     {
-        public LeanKitTokenAuth()
+        public LeanKitTokenAuth(string token)
             : base()
         {
+            Token = token;
         }
 
         public string Token { get; set; }
