@@ -42,11 +42,9 @@ namespace LeanKitCmdQuery
 		{
 			ValidateQuery();
 
-			var leanKitAuth = new LeanKitBasicAuth
+            var leanKitAuth = new LeanKitBasicAuth(_args.User, _args.Password)
 			{
-				Hostname = _args.Host,
-				Username = _args.User,
-				Password = _args.Password
+				Hostname = _args.Host
 			};
 
 			// For internal development testing
